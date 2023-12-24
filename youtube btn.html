@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Youtube Button</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .yt-button button.ytbt {
+        position: relative;
+        height: 200px;
+        display: flex;
+        align-items: flex-end;
+        outline: none;
+        background: none;
+        border: none;
+      }
+
+      .yt-button button.ytbt .ytbt-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 100px;
+        background-color: #0a0a0a;
+        border-radius: 5px;
+        color: #0f0f0f;
+        font-weight: 700;
+        transition: 300ms;
+        outline: #0f0f0f 2px solid;
+        outline-offset: 20;
+      }
+
+      .yt-button button.ytbt .ytbt-holder svg {
+        height: 50px;
+        fill: #0f0f0f;
+        transition: 300ms;
+      }
+
+      .yt-button button.ytbt .yt-holder {
+        position: absolute;
+        height: 200px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .yt-button button.ytbt .yt-holder .dot {
+        position: absolute;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        background-color: #0a0a0a;
+        border-radius: 10px;
+        z-index: 2;
+      }
+
+      .yt-button button.ytbt .yt-holder .light {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height: 200px;
+        clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+        background: transparent;
+      }
+
+      .yt-button button.ytbt:hover .ytbt-holder svg {
+        fill: rgba(255, 0, 0, 1);
+      }
+
+      .yt-button button.ytbt:hover .ytbt-holder {
+        color: rgba(255, 0, 0, 1);
+        outline: rgba(255, 0, 0, 1) 2px solid;
+        outline-offset: 2px;
+      }
+
+      .yt-button button.ytbt:hover .yt-holder .light {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 0, 0, 1) 0%,
+          rgba(255, 255, 255, 0) 75%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="yt-button">
+      <button class="ytbt">
+        <div class="yt-holder">
+          <div class="dot"></div>
+          <div class="light"></div>
+        </div>
+        <div class="ytbt-holder">
+          <svg
+            role="img"
+            height="800px"
+            width="800px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 461.001 461.001"
+            xml:space="preserve"
+          >
+            <path
+              d="M365.257,67.393H95.744C42.866,67.393,
+            0,110.259,0,163.137v134.728
+                    c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137
+                    C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607
+                    c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"
+            ></path>
+          </svg>
+          <p>You Tube</p>
+        </div>
+      </button>
+    </div>
+  </body>
+</html>
